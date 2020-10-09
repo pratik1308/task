@@ -1,0 +1,90 @@
+<div class="container">
+  <h1>Login</h1>
+  <form #myForm="ngForm">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" name="email" aria-describedby="emailHelp"  [(ngModel)]="userObj.email">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" name="password" [(ngModel)]="userObj.password">
+    </div>
+    <button type="button" class="btn btn-primary" (click)="addUser(myForm.value)" *ngIf="!isEdit">login</button>
+
+  </form>
+</div>
+
+
+
+<div class="container">
+  <h1>Registration form</h1>
+  <form #myForm="ngForm">
+    <div class="form-group">
+      <label for="exampleInputEmail1">First Name</label>
+      <input type="email" class="form-control" name="firstname" aria-describedby="emailHelp" [(ngModel)]="userObj.firstname"
+      >
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Last Name</label>
+      <input type="email" class="form-control" name="lastname" aria-describedby="emailHelp" [(ngModel)]="userObj.lastname">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Mobile Number</label>
+      <input type="email" class="form-control" name="mobile" aria-describedby="emailHelp" [(ngModel)]="userObj.mobile">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" name="email" aria-describedby="emailHelp"  [(ngModel)]="userObj.email">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" name="password" [(ngModel)]="userObj.password">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">DOB</label>
+      <input type="email" class="form-control" name="dob" aria-describedby="emailHelp" [(ngModel)]="userObj.dob">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">STATE</label>
+      <input type="email" class="form-control" name="state" aria-describedby="emailHelp" [(ngModel)]="userObj.state">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">CITY</label>
+      <input type="email" class="form-control" name="city" aria-describedby="emailHelp" [(ngModel)]="userObj.city">
+    </div>
+   
+   
+    <button type="button" class="btn btn-primary" (click)="addUser(myForm.value)" *ngIf="!isEdit">Submit</button>
+    <button type="button" class="btn btn-info" *ngIf="isEdit" (click)="updateUser()">Update</button>
+  </form>
+  <br>
+  <table class="table table-dark">
+    <thead>
+      <tr>
+       
+        <th scope="col">Firstname</th>
+        <th scope="col">Lastname</th>
+        <th scope="col">Mobile Number</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+
+      </tr>
+    </thead>
+  <tbody>
+    <tr *ngFor="let user of allUser">
+      <td>{{user.firstname}}</td>
+      <td>{{user.lastname}}</td>
+      <td>{{user.mobile}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.password}}</td>
+      <td><button (click)="editUser(user)" class="btn btn-warning">Edit</button></td>
+      <td><button (click)="deleteUser(user)" class="btn btn-danger">Delete</button></td>
+
+      
+
+    </tr>
+  </tbody>
+  </table>
+</div>

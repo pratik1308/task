@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "firstname": "pratik",
+      "lastname": "jadhav",
+      "mobile": "7898789879",
+      "email": "pratik@gmail.in",
+      "password": "qqqqq",
+      "dob": "09/09/1997",
+      "state": "mha",
+      "city": "ddd",
+      "id": 2
+    },
+    {
+      "firstname": "raghu",
+      "lastname": "kumar",
+      "mobile": "8989890909",
+      "email": "raghu@gmail.com",
+      "password": "popopo",
+      "dob": "09/09/1990",
+      "state": "maharashtra",
+      "city": "diva",
+      "id": 3
+    },
+    {
+      "firstname": "pratik",
+      "lastname": "pratik",
+      "mobile": "9090909090",
+      "email": "pr@gmail.com",
+      "password": "qqwew",
+      "dob": "09/09/1887",
+      "state": "dubai",
+      "city": "hm",
+      "id": 4
+    },
+    {
+      "firstname": "hhhhh",
+      "lastname": "jjjjj",
+      "mobile": "8989898989",
+      "email": "aaa@gmail.com",
+      "password": "qwqwqw",
+      "dob": "09-09-8898",
+      "state": "dekhi",
+      "city": "goahhh",
+      "id": 5
+    }
+  ]
+}
